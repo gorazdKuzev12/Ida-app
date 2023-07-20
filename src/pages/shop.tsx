@@ -107,7 +107,7 @@ export default function Shop() {
           </Filters>
           <Products>
             {Array(12)
-              .fill()
+              .fill(null)
               .map((_, i) => (
                 <Product key={i}>
                   <ProductImage src="/images/kids3.jpg" alt="Product" />

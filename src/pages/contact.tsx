@@ -126,7 +126,7 @@ export default function Contact() {
     <Container>
       <Menu />
       <Title>Contact</Title>
-      <SubTitle>Welcome to our contact page. We're here to help.</SubTitle>
+      <SubTitle>Welcome to our contact page. We are here to help.</SubTitle>
 
       <Panels>
         <LeftPanel>
@@ -145,7 +145,7 @@ export default function Contact() {
             <Input type="text" placeholder="Name" />
             <Input type="text" placeholder="Last Name" />
             <Input type="email" placeholder="Email" />
-            <Textarea rows="4" placeholder="Leave us a message"></Textarea>
+            <Textarea rows={4} placeholder="Leave us a message"></Textarea>
             <Button type="submit">Submit</Button>
           </Form>
         </RightPanel>
