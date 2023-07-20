@@ -16,7 +16,7 @@ export const StyledMenu = styled.div`
 
 export const MenuGroup = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 35px;
 `;
 
 export const MenuItem = styled.a`
@@ -27,4 +27,5 @@ export const MenuItem = styled.a`
 
 export const Logo = styled.div`
   font-weight: bold;
+  margin-right: 100px;
 `;
