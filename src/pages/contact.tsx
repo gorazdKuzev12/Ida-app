@@ -1,16 +1,23 @@
 import styled from "styled-components";
 import Menu from "../components/Menu";
+import Footer from "@/components/Footer";
 
 const Container = styled.div`
-  padding: 50px;
-  height: 170vh;
+  height: 198vh;
   background-color: #ffffff;
 `;
 
 const Title = styled.h1`
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   color: gray;
   text-align: center;
+  padding-top: 12rem;
+`;
+const SubTitle = styled.h1`
+  margin-bottom: 8rem;
+  color: gray;
+  text-align: center;
+  font-size: 1.3rem;
 `;
 
 const Panels = styled.div`
@@ -18,6 +25,7 @@ const Panels = styled.div`
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 4rem;
 `;
 
 const LeftPanel = styled.div`
@@ -52,16 +60,17 @@ const RightPanel = styled.div`
 `;
 
 const StoreTitle = styled.h2`
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   align-self: flex-start;
-  margin-left: 4rem;
+  margin-left: 6rem;
+  font-size: 2rem;
 `;
 
 const ContactInfoContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   align-items: center;
   align-self: flex-start;
   margin-left: 6rem;
@@ -117,11 +126,11 @@ export default function Contact() {
     <Container>
       <Menu />
       <Title>Contact</Title>
-      <p>Welcome to our contact page. We're here to help.</p>
+      <SubTitle>Welcome to our contact page. We're here to help.</SubTitle>
 
       <Panels>
         <LeftPanel>
-          <ImageBehind src="/images/kids3.jpg" alt="Image 1" />
+          <ImageBehind src="/images/bg-leaves.jpg" alt="Image 1" />
           <Image src="/images/kids4.jpg" alt="Image 2" />
         </LeftPanel>
         <RightPanel>
@@ -141,6 +150,7 @@ export default function Contact() {
           </Form>
         </RightPanel>
       </Panels>
+      <Footer />
     </Container>
   );
 }
