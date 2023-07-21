@@ -19,7 +19,7 @@ export const MenuGroup = styled.div`
   gap: 35px;
 `;
 
-export const MenuItem = styled.a`
+export const MenuItem = styled.p`
   cursor: pointer;
   text-decoration: none;
   color: inherit;
