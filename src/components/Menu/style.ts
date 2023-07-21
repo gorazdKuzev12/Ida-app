@@ -11,6 +11,7 @@ export const StyledMenu = styled.div`
   background-color: #f2ede6;
   padding: 35px 15px; // Add some padding to give space to menu items
   color: gray;
+
   font-size: 18px;
 `;
 

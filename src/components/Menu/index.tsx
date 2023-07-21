@@ -23,7 +23,10 @@ const Menu = () => {
           <MenuItem>Login</MenuItem>
         </Link>
         {/* If you want to make the shopping cart clickable, wrap it in a Link as well */}
-        <FaShoppingCart />
+
+        <Link href="/cart">
+          <FaShoppingCart />
+        </Link>
       </MenuGroup>
     </StyledMenu>
   );
