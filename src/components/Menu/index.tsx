@@ -8,26 +8,18 @@ const Menu = () => {
     <StyledMenu>
       <MenuGroup>
         <Link href="/">
-          {" "}
-          {/* Link to the home page */}
           <MenuItem>Home</MenuItem>
         </Link>
         <Link href="/shop">
-          {" "}
-          {/* Link to the shop page */}
           <MenuItem>Shop</MenuItem>
         </Link>
         <Link href="/contact">
-          {" "}
-          {/* Link to the contact page */}
           <MenuItem>Contact</MenuItem>
         </Link>
       </MenuGroup>
       <Logo>IDA</Logo>
       <MenuGroup>
         <Link href="/login">
-          {" "}
-          {/* Link to the login page */}
           <MenuItem>Login</MenuItem>
         </Link>
         {/* If you want to make the shopping cart clickable, wrap it in a Link as well */}
