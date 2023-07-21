@@ -15,7 +15,9 @@ const Rights = styled.p`
   opacity: 0.8;
 `;
 const Subtitle = styled.h3`
-  margin-bottom: 60px;
+  margin-top: 40px;
+
+  margin-bottom: 50px;
   font-size: 3em;
   color: gray;
 `;
