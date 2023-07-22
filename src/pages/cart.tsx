@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -13,6 +13,9 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import Footer from "@/components/Footer";
+import { CheckoutSummary } from "@/components/Checkout";
+import { ShippingDetails } from "@/components/ShippingDetails";
+import { PaymentDetails } from "@/components/PaymentDetails";
 
 // Page container
 const CartContainer = styled.div`
@@ -78,18 +81,7 @@ const ProductName = styled.span`
 `;
 
 // Total & Checkout Button
-const TotalSummary = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 2rem;
-  flex: 1; // 1/3 width
-  border: 2px solid #004d40;
-  color: gray;
-
-  margin: 70px;
-`;
+const TotalSummary = styled.div``;
 
 const TotalAmount = styled.span`
   font-size: 1.4rem;
@@ -256,6 +248,38 @@ const TotalAmountBig = styled.span`
   color: gray;
 `;
 
+const TotalSummaryContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  flex: 1; // 1/3 width
+  border: 1px solid #dadada;
+  color: gray;
+
+  margin: 70px;
+`;
+
+const Tabs = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+`;
+
+interface TabProps {
+  isSelected?: boolean;
+}
+
+const Tab = styled.div<TabProps>`
+  padding: 20px 30px;
+  margin: 2px;
+  width: 100%;
+  background-color: ${(props) => (props.isSelected ? "#004d40" : "#e0e0e0")};
+  color: ${(props) => (props.isSelected ? "#fff" : "#333")};
+  transition: background-color 0.3s ease;
+`;
+
 // For the product item transition animation (fade and scale)
 
 // Main Cart Component
@@ -293,6 +317,28 @@ export default function Cart() {
     },
     // Add other products here...
   ]);
+
+  const [selectedTab, setSelectedTab] = useState("Checkout Summary");
+  const [checkoutData, setCheckoutData] = useState({
+    subtotal: 300,
+    shipping: 20,
+    fee: 5,
+  });
+
+  const handleCheckout = () => {
+    // logic for checking out
+    setSelectedTab("Shipping Details");
+  };
+
+  const handleContinue = () => {
+    // logic for checking out
+    setSelectedTab("Payment");
+  };
+  const handleConfirm = () => {
+    // logic for checking out
+    setSelectedTab("Order Review");
+  };
+
   const handleRemove = (productId: any) => {
     setProducts((prevProducts) =>
       prevProducts.filter((p) => p.id !== productId)
@@ -364,35 +410,28 @@ export default function Cart() {
           ))}
         </TransitionGroup>
 
-        <TotalSummary>
-          <TotalTitle>Order Summary</TotalTitle>
+        <TotalSummaryContainer>
+          <Tabs>
+            <Tab isSelected={selectedTab === "Checkout Summary"}>
+              Checkout Summary
+            </Tab>
+            <Tab isSelected={selectedTab === "Shipping Details"}>
+              Shipping Details
+            </Tab>
+            <Tab isSelected={selectedTab === "Payment"}>Payment</Tab>
+          </Tabs>
 
-          <PromoCode>
-            Do you have a promo code?
-            <PromoInput placeholder="Enter Promo Code" />
-          </PromoCode>
-
-          {/* Breakdown of prices */}
-          <LineItem>
-            <span>Subtotal</span>
-            <span>$300</span> {/* Use your dynamic data here */}
-          </LineItem>
-          <LineItem>
-            <span>Estimated Shipping</span>
-            <span>$20</span> {/* Use your dynamic data here */}
-          </LineItem>
-          <LineItem>
-            <span>Fee</span>
-            <span>$5</span> {/* Use your dynamic data here */}
-          </LineItem>
-          <LineItem>
-            <TotalAmountBig>Total</TotalAmountBig>
-            <TotalAmountBig>$325</TotalAmountBig>{" "}
-            {/* Use your dynamic data here */}
-          </LineItem>
-
-          <CheckoutButton>Checkout</CheckoutButton>
-        </TotalSummary>
+          {selectedTab === "Checkout Summary" && (
+            <CheckoutSummary {...checkoutData} onCheckout={handleCheckout} />
+          )}
+          {selectedTab === "Shipping Details" && (
+            <ShippingDetails onContinue={handleContinue} />
+          )}
+          {selectedTab === "Payment" && (
+            <PaymentDetails onConfirm={handleConfirm} />
+          )}
+          {selectedTab === "Order Review" && <div>Order Review Content</div>}
+        </TotalSummaryContainer>
       </CartContainer>
       <Footer />
     </div>
