@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledMenu, MenuGroup, MenuItem, Logo } from "./style";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaUser, FaHeart } from "react-icons/fa";
 import Link from "next/link"; // Import the Link component from next/link
 
 const Menu = () => {
@@ -19,17 +19,23 @@ const Menu = () => {
       </MenuGroup>
       <Logo>IDA</Logo>
       <MenuGroup>
-        <Link href="/login">
-          <MenuItem>Login</MenuItem>
+        <Link href="/favorites">
+          <MenuItem>
+            <FaHeart />
+          </MenuItem>
         </Link>
-        {/* If you want to make the shopping cart clickable, wrap it in a Link as well */}
-
+        <Link href="/login">
+          <MenuItem>
+            <FaUser />
+          </MenuItem>
+        </Link>
         <Link href="/cart">
-          <FaShoppingCart />
+          <MenuItem>
+            <FaShoppingCart />
+          </MenuItem>
         </Link>
       </MenuGroup>
     </StyledMenu>
   );
 };
-
 export default Menu;

@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
-import { FaPlus, FaCircle, FaTag } from "react-icons/fa";
+import {
+  FaHeart,
+  FaShoppingCart,
+  FaPlus,
+  FaCircle,
+  FaTag,
+} from "react-icons/fa";
+import Heart from "@/components/Heart";
 
 const Container = styled.div`
   background-color: white;
@@ -139,9 +146,6 @@ const ScrollableImage = styled.img`
   scroll-snap-align: start; // Ensures smooth scrolling between images
   transition: transform 0.3s ease;
 `;
-const ProductImageContainer = styled.div`
-  margin-right: 30px; // To create a space for the scrollbar
-`;
 
 const ProductInfo = styled.div`
   display: flex;
@@ -155,6 +159,38 @@ const Colors = styled.div`
   display: flex;
   gap: 10px;
 `;
+
+const AddToCartButton = styled.button`
+  margin-top: 10px;
+  border: 1px solid gray;
+  background-color: white;
+  color: gray;
+  width: 100%;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: gray;
+    color: white;
+  }
+`;
+
+const ProductImageContainer = styled.div`
+  position: relative; // This is crucial for the absolute positioning of the Heart.
+  margin-right: 30px;
+`;
+
+const HeartContainer = styled.div`
+  position: absolute;
+  top: 10px; // Adjust as necessary for positioning
+  right: 60px; // Adjust as necessary for positioning
+  z-index: 10; // To ensure the heart stays above the image
+`;
+
 export default function Shop() {
   const productData = {
     size: "M",
@@ -166,6 +202,8 @@ export default function Shop() {
     "/images/kids3.jpg",
     // ... add as many images as needed for each product
   ];
+  const [isLiked, setIsLiked] = useState(false);
+
   return (
     <Container>
       <Menu />
@@ -199,6 +237,13 @@ export default function Shop() {
               .map((_, i) => (
                 <Product key={i}>
                   <ProductImageContainer>
+                    <HeartContainer>
+                      <Heart
+                        isLiked={isLiked}
+                        onClick={() => setIsLiked(!isLiked)}
+                      />
+                    </HeartContainer>
+
                     <ScrollableImages>
                       {productImages.map((imgSrc, index) => (
                         <ScrollableImage
@@ -223,6 +268,10 @@ export default function Shop() {
                       <ColorIcon color="gray" />
                     </Colors>
                   </SizeAndColors>
+                  <AddToCartButton>
+                    <FaShoppingCart />
+                    Add to Cart
+                  </AddToCartButton>
                 </Product>
               ))}
           </Products>{" "}
