@@ -17,7 +17,7 @@ export const StyledMenu = styled.div`
 
 export const MenuGroup = styled.div`
   display: flex;
-  gap: 35px;
+  gap: 30px;
 `;
 
 export const MenuItem = styled.p`
