@@ -26,7 +26,7 @@ const StaticDiv = styled.div`
 const TextOverlay = styled.div`
   position: absolute;
   top: 60%;
-  left: 20%;
+  left: 22%;
   transform: translate(-50%, -50%); // Centering
   text-align: center;
 `;
