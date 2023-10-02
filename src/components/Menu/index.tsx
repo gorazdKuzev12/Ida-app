@@ -8,30 +8,37 @@ const Menu = () => {
     <StyledMenu>
       <MenuGroup>
         <Link href="/">
-          <MenuItem>Home</MenuItem>
+          <MenuItem>Почетна</MenuItem>
         </Link>
         <Link href="/shop">
-          <MenuItem>Shop</MenuItem>
+          <MenuItem>Купи</MenuItem>
+        </Link>
+        <Link href="/shop">
+          <MenuItem>Моја продавница</MenuItem>
         </Link>
         <Link href="/contact">
-          <MenuItem>Contact</MenuItem>
+          <MenuItem>За нас</MenuItem>
+        </Link>
+        <Link href="/contact">
+          <MenuItem>Контакт</MenuItem>
         </Link>
       </MenuGroup>
-      <Logo>IDA</Logo>
+      <Logo>ThriftMallMK</Logo>
       <MenuGroup>
         <Link href="/favorites">
           <MenuItem>
             <FaHeart />
           </MenuItem>
         </Link>
-        <Link href="/login">
-          <MenuItem>
-            <FaUser />
-          </MenuItem>
-        </Link>
+
         <Link href="/cart">
           <MenuItem>
             <FaShoppingCart />
+          </MenuItem>
+        </Link>
+        <Link href="/login">
+          <MenuItem>
+            <FaUser />
           </MenuItem>
         </Link>
       </MenuGroup>

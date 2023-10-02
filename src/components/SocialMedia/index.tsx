@@ -11,7 +11,14 @@ const Container = styled.div`
 
 const Title = styled.h2`
   margin: 70px;
-  color: gray;
+  color: #666666;
+  font-weight: light;
+  font-size: 15px; // Slightly larger font size for prominence
+  letter-spacing: 1.5px; // Add some letter spacing for clarity and modern touch
+  background-color: transparent; // No background for a minimalist feel
+  padding: 5px 15px; // Little padding for a padded appearance
+  border: none; // No borders for minimalism
+  text-transform: uppercase; // Make the text uppercase for a branded feel
 `;
 
 const ImageContainer = styled.div`
@@ -28,7 +35,7 @@ const Image = styled.img`
 const SocialMedia = () => {
   return (
     <Container>
-      <Title>Follow @ida__kids on Instagram</Title>
+      <Title>Follow @thriftmallmkd on Instagram</Title>
       <ImageContainer>
         {/* Replace with your image paths */}
         <Image src="/images/kids1.jpg" alt="Instagram Image 1" />
