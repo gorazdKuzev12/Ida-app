@@ -13,7 +13,7 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
-  background-color: #f5f5f5;
+  background-color: #f1f1f0;
   display: flex;
   justify-content: space-between;
   height: 140vh;
@@ -79,13 +79,13 @@ const BestSeller = () => {
   return (
     <Container>
       <LeftPanel>
-        <StaticImage src="/images/kids2.jpg" alt="Right Product Image" />
+        <StaticImage src="/images/record-gray.jpg" alt="Right Product Image" />
       </LeftPanel>
       <RightPanel>
         <ImageWrapper>
-          <Image src="/images/kids1.jpg" alt="Right Product Image" />
+          <Image src="/images/record-player.jpg" alt="Right Product Image" />
         </ImageWrapper>
-        <OverlayText>ДЕЦА</OverlayText>
+        <OverlayText>КНИГИ</OverlayText>
       </RightPanel>
     </Container>
   );

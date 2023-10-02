@@ -59,7 +59,7 @@ export const HomePage = () => {
         <TextOverlay>
           <TitleText>ШТО Е THRIFTMALLMK?</TitleText>
           <ModernText>
-            Купи, Продај. Облека, Плочи, Инструменти, Чевли, Накит...
+            Купи, Продај. Облека, Книги, Плочи, Инструменти, Чевли, Накит...
           </ModernText>
         </TextOverlay>
       </StaticDiv>

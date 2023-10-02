@@ -23,16 +23,15 @@ export const MenuGroup = styled.div`
 export const MenuItem = styled.p`
   cursor: pointer;
   text-decoration: none;
-  color: inherit;
+  color: #094645;
   font-family: "Lato", sans-serif;
 `;
 
 export const Logo = styled.div`
   display: inline-block;
-  font-weight: light;
   font-size: 20px; // Slightly larger font size for prominence
   letter-spacing: 3px; // Add some letter spacing for clarity and modern touch
-  color: #757474; // Modern neutral dark color
+  color: #094645; // Modern neutral dark color
   background-color: transparent; // No background for a minimalist feel
   padding: 5px 15px; // Little padding for a padded appearance
   border: none; // No borders for minimalism
