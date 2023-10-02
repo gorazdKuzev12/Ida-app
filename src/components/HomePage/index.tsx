@@ -10,7 +10,7 @@ const MainContainer = styled.div`
 const ScrollableDiv = styled.div`
   flex: 1;
   overflow-y: auto;
-  background-image: url("/images/kids3.jpg");
+  background-image: url("/images/record.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -58,7 +58,9 @@ export const HomePage = () => {
       <StaticDiv>
         <TextOverlay>
           <TitleText>ШТО Е THRIFTMALLMK?</TitleText>
-          <ModernText>Купи, Продај. Облека, Чевли, Накит...</ModernText>
+          <ModernText>
+            Купи, Продај. Облека, Плочи, Инструменти, Чевли, Накит...
+          </ModernText>
         </TextOverlay>
       </StaticDiv>
     </MainContainer>
