@@ -17,7 +17,7 @@ const Menu = () => {
           <MenuItem>Contact</MenuItem>
         </Link>
       </MenuGroup>
-      <Logo>IDA</Logo>
+      <Logo>ThriftMallMK</Logo>
       <MenuGroup>
         <Link href="/favorites">
           <MenuItem>

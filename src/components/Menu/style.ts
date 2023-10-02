@@ -27,6 +27,14 @@ export const MenuItem = styled.p`
 `;
 
 export const Logo = styled.div`
-  font-weight: bold;
-  margin-right: 100px;
+  display: inline-block;
+  font-weight: light;
+  font-size: 20px; // Slightly larger font size for prominence
+  letter-spacing: 3px; // Add some letter spacing for clarity and modern touch
+  color: #333; // Modern neutral dark color
+  background-color: transparent; // No background for a minimalist feel
+  padding: 5px 15px; // Little padding for a padded appearance
+  border: none; // No borders for minimalism
+  margin-right: 100px; // Maintaining the right margin
+  text-transform: uppercase; // Make the text uppercase for a branded feel
 `;
