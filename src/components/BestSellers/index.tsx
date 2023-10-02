@@ -29,7 +29,7 @@ const LeftPanel = styled.div`
 const RightPanel = styled.div`
   flex: 1;
   position: relative;
-  background-color: pink;
+  background-color: #f7f5f5;
   img {
     width: 60%;
     height: 70%;
@@ -60,10 +60,10 @@ const BestSeller = () => {
   return (
     <Container>
       <LeftPanel>
-        <img src="/images/kids7.jpg" alt="Best Seller Left" />
+        <img src="/images/kids2.jpg" alt="Best Seller Left" />
       </LeftPanel>
       <RightPanel>
-        <BestSellerLabel>BEST SELLER</BestSellerLabel>
+        <BestSellerLabel>KIDS</BestSellerLabel>
         <img src="/images/kids8.jpg" alt="Best Seller Right" />
         <ViewMore>View More</ViewMore>
       </RightPanel>
