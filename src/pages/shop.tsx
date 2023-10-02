@@ -72,9 +72,8 @@ const Products = styled.div`
 `;
 
 const Product = styled.div`
-  flex-basis: calc(33.3333%);
+  flex-basis: 10%;
   text-align: center;
-  padding: 10px;
   margin-bottom: 30px;
 `;
 
@@ -139,9 +138,8 @@ const ScrollableImage = styled.img`
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 550px;
-  width: 300px;
-
-  margin-right: 3px; // This creates the 3px space between the image and scrollbar
+  width: 250px;
+  margin-left: 30px;
 
   scroll-snap-align: start; // Ensures smooth scrolling between images
   transition: transform 0.3s ease;
@@ -208,9 +206,6 @@ export default function Shop() {
     <Container>
       <Menu />
       <Content>
-        <Title>Shop Our Collection</Title>
-        <Subtitle>Discover the best products curated just for you</Subtitle>
-
         <FilterContainer>
           <Filters>
             <FilterLabel>Filter by</FilterLabel>
