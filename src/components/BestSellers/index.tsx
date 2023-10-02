@@ -30,6 +30,7 @@ const RightPanel = styled.div`
   flex: 1;
   position: relative;
   background-color: #f7f5f5;
+  cursor: pointer;
   img {
     width: 60%;
     height: 70%;

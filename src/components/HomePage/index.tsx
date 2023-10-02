@@ -18,7 +18,7 @@ const ScrollableDiv = styled.div`
 
 const StaticDiv = styled.div`
   flex: 1;
-  background-image: url("/images/kids2.jpg"); // Assuming there's a second image
+  background-image: url("/images/main-img.jpg"); // Assuming there's a second image
   background-size: cover;
   background-position: center;
 `;
