@@ -67,13 +67,13 @@ const NewArrivals = () => {
         <ImageWrapper>
           <Image src="/images/women.jpg" alt="Left Product Image" />
         </ImageWrapper>
-        <OverlayText>WOMEN</OverlayText>
+        <OverlayText>ЖЕНИ</OverlayText>
       </LeftPanel>
       <RightPanel>
         <ImageWrapper>
           <Image src="/images/man.jpg" alt="Right Product Image" />
         </ImageWrapper>
-        <OverlayText>MAN</OverlayText>
+        <OverlayText>МАЖИ</OverlayText>
       </RightPanel>
     </Container>
   );

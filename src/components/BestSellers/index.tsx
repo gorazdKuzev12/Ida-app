@@ -13,60 +13,79 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
+  background-color: #f5f5f5;
   display: flex;
-  height: 110vh;
+  justify-content: space-between;
+  height: 140vh;
 `;
 
 const LeftPanel = styled.div`
-  flex: 1;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  position: relative;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Updated */
+  height: 100%; /* Updated */
 `;
 
 const RightPanel = styled.div`
-  flex: 1;
   position: relative;
-  background-color: #f7f5f5;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   cursor: pointer;
-  img {
-    width: 60%;
-    height: 70%;
-    object-fit: cover;
-    display: block;
-    margin: 15% auto 0;
+`;
+
+const ImageWrapper = styled.div`
+  width: 72%;
+  height: 70%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
   }
 `;
-
-const BestSellerLabel = styled.div`
-  position: absolute;
-  top: 20%; // Adjust as necessary
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2em;
-  animation: ${fadeIn} 1s ease-out forwards;
+const StaticImage = styled.img`
+  width: 100%;
+  height: 100%; /* Updated */
 `;
 
-const ViewMore = styled.a`
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-  text-decoration: underline;
-  cursor: pointer;
+const OverlayText = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 const BestSeller = () => {
   return (
     <Container>
       <LeftPanel>
-        <img src="/images/kids2.jpg" alt="Best Seller Left" />
+        <StaticImage src="/images/kids2.jpg" alt="Right Product Image" />
       </LeftPanel>
       <RightPanel>
-        <BestSellerLabel>KIDS</BestSellerLabel>
-        <img src="/images/kids8.jpg" alt="Best Seller Right" />
-        <ViewMore>View More</ViewMore>
+        <ImageWrapper>
+          <Image src="/images/kids1.jpg" alt="Right Product Image" />
+        </ImageWrapper>
+        <OverlayText>ДЕЦА</OverlayText>
       </RightPanel>
     </Container>
   );

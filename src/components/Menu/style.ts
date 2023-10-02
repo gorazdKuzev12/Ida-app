@@ -36,6 +36,6 @@ export const Logo = styled.div`
   background-color: transparent; // No background for a minimalist feel
   padding: 5px 15px; // Little padding for a padded appearance
   border: none; // No borders for minimalism
-  margin-right: 100px; // Maintaining the right margin
   text-transform: uppercase; // Make the text uppercase for a branded feel
+  margin-left: -360px;
 `;

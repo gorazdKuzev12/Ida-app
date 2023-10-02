@@ -72,7 +72,7 @@ const Products = styled.div`
 `;
 
 const Product = styled.div`
-  flex-basis: calc(33.3333% - 20px);
+  flex-basis: calc(33.3333%);
   text-align: center;
   padding: 10px;
   margin-bottom: 30px;
