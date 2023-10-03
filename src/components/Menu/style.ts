@@ -12,12 +12,12 @@ export const StyledMenu = styled.div`
   padding: 35px 15px; // Add some padding to give space to menu items
   color: gray;
 
-  font-size: 18px;
+  font-size: 14px;
 `;
 
 export const MenuGroup = styled.div`
   display: flex;
-  gap: 30px;
+  gap: 25px;
 `;
 
 export const MenuItem = styled.p`
@@ -36,5 +36,5 @@ export const Logo = styled.div`
   padding: 5px 15px; // Little padding for a padded appearance
   border: none; // No borders for minimalism
   text-transform: uppercase; // Make the text uppercase for a branded feel
-  margin-left: -360px;
+  margin-left: -300px;
 `;

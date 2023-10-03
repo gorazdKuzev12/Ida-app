@@ -9,9 +9,10 @@ export default function Home() {
   return (
     <>
       <HomePage />
+      <NewArrivals />
+
       <VinylRecord />
 
-      <NewArrivals />
       <BestSeller />
 
       <SocialMedia />
