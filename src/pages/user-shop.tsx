@@ -313,6 +313,26 @@ const DetailsInfo = styled.div`
   text-align: center;
   margin-top: 30px;
 `;
+const NewProductButton = styled.button`
+  background-color: #094645; // Set background color
+  color: #fff; // White text
+  padding: 10px 20px; // Padding for size
+  border: none; // Remove default border
+  width: 100%; //
+  cursor: pointer; // Cursor style on hover
+  font-size: 1rem; // Text size
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease; // Smooth color transition on hover
+
+  &:hover {
+    background-color: #076b5c; // Slightly lighter green on hover
+  }
+
+  &:disabled {
+    background-color: #637373; // Gray out when disabled
+    cursor: not-allowed; // Show not-allowed cursor when disabled
+  }
+`;
 export default function Shop() {
   const productData = {
     size: "M",
@@ -322,7 +342,12 @@ export default function Shop() {
   const [selectedAvailableFilter, setSelectedAvailableFilter] = useState("");
 
   const filters = ["ОБЛЕКА", "КНИГИ", "ПЛОЧИ", "ИНТРУМЕНТИ"];
-  const availableFilters = [" ПРОДАДЕНО", "ДОСТАПНО", "РЕЗЕРВИРАНО"];
+  const availableFilters = [
+    " ПРОДАДЕНО",
+    "ДОСТАПНО",
+    "РЕЗЕРВИРАНО",
+    "ОЧЕКУВАЊЕ",
+  ];
 
   const productImages = [
     "/images/kids1.jpg",
@@ -345,6 +370,7 @@ export default function Shop() {
               <JoinedDate>Joined: January 2021</JoinedDate>
             </div>
           </DetailsInfo>
+          <NewProductButton>Додај нов продукт</NewProductButton>{" "}
           <AdditionalInfo>
             <InfoItem>
               <IconContainer>

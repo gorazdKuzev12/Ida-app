@@ -11,7 +11,7 @@ const Title = styled.h1`
   margin-bottom: 18px;
   color: gray;
   text-align: center;
-  padding-top: 12rem;
+  padding-top: 7rem;
 `;
 const SubTitle = styled.h1`
   margin-bottom: 8rem;
@@ -125,8 +125,7 @@ export default function Contact() {
   return (
     <Container>
       <Menu />
-      <Title>Contact</Title>
-      <SubTitle>Welcome to our contact page. We are here to help.</SubTitle>
+      <Title>Контактирај не</Title>
 
       <Panels>
         <LeftPanel>
