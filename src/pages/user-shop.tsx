@@ -9,6 +9,8 @@ import {
   FaCircle,
   FaTag,
 } from "react-icons/fa";
+import { AiOutlineGlobal, AiFillStar, AiOutlineUser } from "react-icons/ai";
+
 import Heart from "@/components/Heart";
 
 const Container = styled.div`
@@ -229,6 +231,88 @@ export const Letter = styled.span`
   /* Additional styles for each letter if needed */
 `;
 
+const ProfileContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* border-right: 1px solid #ddd;
+  padding-right: 30px; */
+`;
+
+const Image = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  object-fit: cover;
+  margin-bottom: 10px;
+`;
+
+const UserName = styled.h2`
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #333;
+`;
+
+const ShopName = styled.h3`
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+`;
+
+const JoinedDate = styled.p`
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: #888;
+`;
+
+const AdditionalInfo = styled.div`
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; // Adjusted to column
+  gap: 15px; // Adjusted gap for vertical spacing
+  font-size: 0.9rem;
+  color: #555;
+  width: 100%;
+  align-items: center; // Aligns items horizontally in the center
+
+  padding: 10px 0;
+`;
+
+const InfoItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding: 1.5rem;
+`;
+
+const IconContainer = styled.div`
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #4a4a4a;
+`;
+
+const InfoLabel = styled.span`
+  font-size: 0.9rem;
+  margin-right: 5px;
+  color: #333;
+`;
+
+const InfoValue = styled.span`
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #666;
+`;
+const DetailsInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+`;
 export default function Shop() {
   const productData = {
     size: "M",
@@ -252,6 +336,47 @@ export default function Shop() {
     <Container>
       <Menu />
       <Content>
+        <ProfileContainer>
+          <DetailsInfo>
+            <Image src="/images/kids1.jpg" alt="User Name" />
+            <div>
+              <UserName>Book Shop</UserName>
+              <ShopName>Gorazd Kuzev</ShopName>
+              <JoinedDate>Joined: January 2021</JoinedDate>
+            </div>
+          </DetailsInfo>
+          <AdditionalInfo>
+            <InfoItem>
+              <IconContainer>
+                <AiOutlineGlobal />
+              </IconContainer>
+              <div>
+                <InfoLabel>Location</InfoLabel>
+                <InfoValue>New York, USA</InfoValue>
+              </div>
+            </InfoItem>
+
+            <InfoItem>
+              <IconContainer>
+                <AiOutlineUser />
+              </IconContainer>
+              <div>
+                <InfoLabel>Followers</InfoLabel>
+                <InfoValue>1.2K</InfoValue>
+              </div>
+            </InfoItem>
+            <InfoItem>
+              <IconContainer>
+                <AiFillStar />
+              </IconContainer>
+              <div>
+                <InfoLabel>Rating</InfoLabel>
+                <InfoValue>4.5/5</InfoValue>
+              </div>
+            </InfoItem>
+          </AdditionalInfo>
+        </ProfileContainer>
+
         <FilterProductsContainer>
           <FilterBoxContainer>
             {filters.map((filter) => (
