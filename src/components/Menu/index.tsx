@@ -13,7 +13,7 @@ const Menu = () => {
         <Link href="/shop">
           <MenuItem>Купи</MenuItem>
         </Link>
-        <Link href="/shop">
+        <Link href="/user-shop">
           <MenuItem>Моја продавница</MenuItem>
         </Link>
         <Link href="/contact">

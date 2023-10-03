@@ -45,10 +45,12 @@ const Filters = styled.div`
   margin-right: 50px;
 `;
 
-const FilterContainer = styled.div`
+const FilterAvailabilityContainer = styled.div`
   display: flex;
+  flex-direction: column;
   margin-top: 50px;
-  width: 300px;
+  width: 30px;
+  padding: 15px;
 `;
 
 const FilterLabel = styled.div`
@@ -160,25 +162,6 @@ const Colors = styled.div`
   gap: 10px;
 `;
 
-const AddToCartButton = styled.button`
-  margin-top: 10px;
-  border: 1px solid gray;
-  background-color: white;
-  color: gray;
-  width: 100%;
-  padding: 8px 15px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:hover {
-    background-color: gray;
-    color: white;
-  }
-`;
-
 const ProductImageContainer = styled.div`
   position: relative; // This is crucial for the absolute positioning of the Heart.
   margin-right: 30px;
@@ -211,9 +194,39 @@ const FilterBox = styled.div<FilterBoxProps>`
   }
 `;
 
+interface FilterBoxProps {
+  isSelected: boolean;
+}
+
+const FilteravailableBox = styled.div<FilterBoxProps>`
+  width: 30px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: ${(props) => (props.isSelected ? "#094645" : "#fff")};
+  color: ${(props) => (props.isSelected ? "#fff" : "#000")};
+
+  &:hover {
+    background-color: #aaa;
+    color: #fff;
+  }
+`;
+
 const FilterProductsContainer = styled.div`
   display: flex;
   flex-direction: column;
+`;
+export const VerticalText = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+
+export const Letter = styled.span`
+  /* Additional styles for each letter if needed */
 `;
 
 export default function Shop() {
@@ -222,7 +235,11 @@ export default function Shop() {
     colors: ["black", "gray", "yellow"],
   };
   const [selectedFilter, setSelectedFilter] = useState("ОБЛЕКА");
+  const [selectedAvailableFilter, setSelectedAvailableFilter] = useState("");
+
   const filters = ["ОБЛЕКА", "КНИГИ", "ПЛОЧИ", "ИНТРУМЕНТИ"];
+  const availableFilters = [" ПРОДАДЕНО", "ДОСТАПНО", "РЕЗЕРВИРАНО"];
+
   const productImages = [
     "/images/kids1.jpg",
     "/images/kids2.jpg",
@@ -235,28 +252,6 @@ export default function Shop() {
     <Container>
       <Menu />
       <Content>
-        <FilterContainer>
-          <Filters>
-            <FilterLabel>Филтрирај:</FilterLabel>
-            <Filter>
-              <span>Категорија</span>
-              <FaPlus size={24} />
-            </Filter>
-            <Filter>
-              <span>Цена</span>
-              <FaPlus size={24} />
-            </Filter>
-            <Filter>
-              <span>Боја</span>
-              <FaPlus size={24} />
-            </Filter>
-            <Filter>
-              <span>Величина</span>
-              <FaPlus size={24} />
-            </Filter>
-          </Filters>
-        </FilterContainer>
-
         <FilterProductsContainer>
           <FilterBoxContainer>
             {filters.map((filter) => (
@@ -275,13 +270,6 @@ export default function Shop() {
               .map((_, i) => (
                 <Product key={i}>
                   <ProductImageContainer>
-                    <HeartContainer>
-                      <Heart
-                        isLiked={isLiked}
-                        onClick={() => setIsLiked(!isLiked)}
-                      />
-                    </HeartContainer>
-
                     <ScrollableImages>
                       {productImages.map((imgSrc, index) => (
                         <ScrollableImage
@@ -306,14 +294,25 @@ export default function Shop() {
                       <ColorIcon color="gray" />
                     </Colors>
                   </SizeAndColors>
-                  <AddToCartButton>
-                    <FaShoppingCart />
-                    Add to Cart
-                  </AddToCartButton>
                 </Product>
               ))}
           </Products>{" "}
         </FilterProductsContainer>
+        <FilterAvailabilityContainer>
+          {availableFilters.map((filter) => (
+            <FilteravailableBox
+              key={filter}
+              isSelected={filter === selectedAvailableFilter}
+              onClick={() => setSelectedAvailableFilter(filter)}
+            >
+              <VerticalText>
+                {filter.split("").map((letter, index) => (
+                  <Letter key={index}>{letter.toUpperCase()}</Letter>
+                ))}
+              </VerticalText>
+            </FilteravailableBox>
+          ))}
+        </FilterAvailabilityContainer>
       </Content>
       <Footer />
     </Container>
