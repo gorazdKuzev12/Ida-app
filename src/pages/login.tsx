@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const LoginPageContainer = styled.div`
   background-color: white;
-  color: gray;
+  color: #094645;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,14 +17,13 @@ const LoginPageContainer = styled.div`
 const FormContainer = styled.div`
   background-color: #f8f8f8;
   padding: 50px;
-  border-radius: 15px;
   width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px; // gap between child elements
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid #094645;
 `;
 
 const Title = styled.h2`
@@ -43,7 +42,7 @@ const InputWrapper = styled.div`
 const Input = styled.input`
   flex: 1; // allows input to take up the rest of the space
   padding: 10px 15px;
-  border: 2px solid gray;
+  border: 2px solid #094645;
   border-radius: 8px;
   background-color: transparent;
   font-size: 1.1rem;
@@ -57,10 +56,9 @@ const Input = styled.input`
 
 const Button = styled.button`
   padding: 12px 25px;
-  background-color: gray;
+  background-color: #094645;
   color: white;
   border: none;
-  border-radius: 50px; // fully rounded corners
   cursor: pointer;
   font-size: 1.1rem;
   transition: background-color 0.3s, transform 0.3s;
@@ -76,16 +74,16 @@ export default function Login() {
     <LoginPageContainer>
       <Menu />
       <FormContainer>
-        <Title>Login</Title>
+        <Title>Логин</Title>
         <InputWrapper>
-          <FaUserAlt color="gray" size={20} />
-          <Input type="text" placeholder="Username or Email" />
+          <FaUserAlt color="#094645" size={20} />
+          <Input type="text" placeholder="Корисничко име или е-маил" />
         </InputWrapper>
         <InputWrapper>
-          <FaLock color="gray" size={20} />
-          <Input type="password" placeholder="Password" />
+          <FaLock color="#094645" size={20} />
+          <Input type="password" placeholder="Лозинка" />
         </InputWrapper>
-        <Button>Login</Button>
+        <Button>Логирај се</Button>
       </FormContainer>
     </LoginPageContainer>
   );

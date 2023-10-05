@@ -115,7 +115,7 @@ const Size = styled.span`
 const ScrollableImages = styled.div`
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 500px; // Assuming an image height, adjust as needed
+  height: 350px; // Assuming an image height, adjust as needed
 
   /* For Firefox */
   scrollbar-width: thin;
@@ -308,7 +308,7 @@ export default function Shop() {
                   </SizeAndColors>
                   <AddToCartButton>
                     <FaShoppingCart />
-                    Add to Cart
+                    Додај во кошичка
                   </AddToCartButton>
                 </Product>
               ))}

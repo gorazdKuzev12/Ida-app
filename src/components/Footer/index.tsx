@@ -15,11 +15,15 @@ const Rights = styled.p`
   opacity: 0.8;
 `;
 const Subtitle = styled.h3`
-  margin-top: 40px;
+  margin-top: 35px;
 
   margin-bottom: 50px;
-  font-size: 3em;
-  color: gray;
+  font-family: "Montserrat", sans-serif; // Another modern font
+  font-weight: 700;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 `;
 
 const IconContainer = styled.div`
@@ -42,7 +46,7 @@ const SocialIcon = styled.a`
 const Footer = () => {
   return (
     <FooterContainer>
-      <Subtitle>Stay Comfy</Subtitle>
+      <Subtitle>THRIFTMALLMK</Subtitle>
       <p>Subscribe for Updates & Special Offers</p>
       <IconContainer>
         <SocialIcon href="https://instagram.com/ida__kids">

@@ -236,6 +236,7 @@ const ProfileContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-width: 320px;
   /* border-right: 1px solid #ddd;
   padding-right: 30px; */
 `;
@@ -281,31 +282,37 @@ const AdditionalInfo = styled.div`
 
 const InfoItem = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   width: 100%;
   padding: 1.5rem;
+  gap: 1rem; // space between child elements
 `;
 
+const Info = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 const IconContainer = styled.div`
+  flex-shrink: 0;
   font-size: 1.5rem;
-  margin-bottom: 5px;
-  color: #4a4a4a;
+  color: #076b5c; // gold color for star icon
 `;
 
-const InfoLabel = styled.span`
-  font-size: 0.9rem;
-  margin-right: 5px;
+const InfoLabel = styled.div`
+  font-weight: 500;
   color: #333;
+  margin-right: 1rem; // space between label and value
+  font-size: 1.1rem;
 `;
 
-const InfoValue = styled.span`
-  font-size: 0.8rem;
+const InfoValue = styled.div`
   font-weight: bold;
-  color: #666;
+  color: #094645; // dark teal color
 `;
+
 const DetailsInfo = styled.div`
   display: flex;
   flex-direction: row;
@@ -376,29 +383,29 @@ export default function Shop() {
               <IconContainer>
                 <AiOutlineGlobal />
               </IconContainer>
-              <div>
-                <InfoLabel>Location</InfoLabel>
-                <InfoValue>New York, USA</InfoValue>
-              </div>
+              <Info>
+                <InfoLabel>Локација</InfoLabel>
+                <InfoValue>Штип</InfoValue>
+              </Info>
             </InfoItem>
 
             <InfoItem>
               <IconContainer>
                 <AiOutlineUser />
               </IconContainer>
-              <div>
-                <InfoLabel>Followers</InfoLabel>
+              <Info>
+                <InfoLabel>Следбеници</InfoLabel>
                 <InfoValue>1.2K</InfoValue>
-              </div>
+              </Info>
             </InfoItem>
             <InfoItem>
               <IconContainer>
                 <AiFillStar />
               </IconContainer>
-              <div>
-                <InfoLabel>Rating</InfoLabel>
+              <Info>
+                <InfoLabel>Рејтинг</InfoLabel>
                 <InfoValue>4.5/5</InfoValue>
-              </div>
+              </Info>
             </InfoItem>
           </AdditionalInfo>
         </ProfileContainer>
@@ -449,7 +456,7 @@ export default function Shop() {
               ))}
           </Products>{" "}
         </FilterProductsContainer>
-        <FilterAvailabilityContainer>
+        {/* <FilterAvailabilityContainer>
           {availableFilters.map((filter) => (
             <FilteravailableBox
               key={filter}
@@ -463,7 +470,7 @@ export default function Shop() {
               </VerticalText>
             </FilteravailableBox>
           ))}
-        </FilterAvailabilityContainer>
+        </FilterAvailabilityContainer> */}
       </Content>
       <Footer />
     </Container>
