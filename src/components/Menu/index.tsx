@@ -16,10 +16,10 @@ const Menu = () => {
         <Link href="/user-shop">
           <MenuItem>Моја продавница</MenuItem>
         </Link>
-        <Link href="/contact">
+        <Link href="/shops">
           <MenuItem>Продавници</MenuItem>
         </Link>
-        <Link href="/contact">
+        <Link href="/aboutus">
           <MenuItem>За нас</MenuItem>
         </Link>
       </MenuGroup>
