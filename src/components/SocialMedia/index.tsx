@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FaInstagram, FaFacebookF, FaEnvelope } from "react-icons/fa";
 
 const Container = styled.div`
-  background-color: #f2ede6; // A natural purple shade
+  background-color: #ffffff; // A natural purple shade
   padding: 20px;
   text-align: center;
   height: 90vh;

@@ -8,9 +8,10 @@ import Footer from "@/components/Footer";
 const FavoritesContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #f7f7f7;
-  padding: 2rem;
+  background-color: #ffffff;
   min-height: 100vh;
+  padding-left: 4.4rem;
+  padding-right: 4.4rem;
 `;
 
 // Favorites Header
@@ -19,7 +20,7 @@ const FavoritesHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(180deg, #ffffff 70%, #f4f4f4 30%);
+  background: linear-gradient(180deg, #ffffff 70%, #f4f4f4 20%);
   border-bottom: 1px solid #e0e0e0;
   padding-top: 12rem;
   width: 100%;
@@ -27,7 +28,7 @@ const FavoritesHeader = styled.header`
 
 const FavoritesTitle = styled.h1`
   font-size: 1.8rem;
-  color: #444;
+  color: #094645;
 `;
 
 const ProductList = styled.ul`
@@ -35,7 +36,6 @@ const ProductList = styled.ul`
   padding: 0;
   margin: 2rem 0;
   background-color: #fff;
-  border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 `;
 
@@ -129,7 +129,7 @@ export default function Favorites() {
       <Menu />
       <FavoritesContainer>
         <FavoritesHeader>
-          <FavoritesTitle>My Favorites</FavoritesTitle>
+          <FavoritesTitle>Зачувани</FavoritesTitle>
         </FavoritesHeader>
         <ProductList>
           {products.map((product) => (

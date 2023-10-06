@@ -4,6 +4,7 @@ import BestSeller from "@/components/BestSellers";
 import SocialMedia from "@/components/SocialMedia";
 import Footer from "@/components/Footer";
 import VinylRecord from "@/components/Record";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <BestSeller />
 
       <SocialMedia />
+      <Contact />
 
       <Footer />
     </>

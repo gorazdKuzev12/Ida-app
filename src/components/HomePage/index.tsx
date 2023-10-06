@@ -34,6 +34,8 @@ const TextOverlay = styled.div`
 const ModernText = styled.p`
   font-family: "Avenir", sans-serif; // Modern font
   color: white;
+  margin-bottom: 0.3em; // Spacing between title and other text
+
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Text shadow for readability
 `;
 
@@ -43,7 +45,15 @@ const TitleText = styled.h1`
   font-size: 2.5em;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 1em; // Spacing between title and other text
+  margin-bottom: 0.7em; // Spacing between title and other text
+  cursor: pointer;
+`;
+const TitleText1 = styled.h1`
+  font-family: "Montserrat", sans-serif; // Another modern font
+  font-weight: 400;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 `;
 
@@ -61,6 +71,7 @@ export const HomePage = () => {
           <ModernText>
             Купи, Продај. Облека, Книги, Плочи, Инструменти, Чевли, Накит...
           </ModernText>
+          <TitleText1>КОНТАКТИРАЈ НЕ</TitleText1>
         </TextOverlay>
       </StaticDiv>
     </MainContainer>

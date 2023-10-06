@@ -1,17 +1,18 @@
 import styled from "styled-components";
-import Menu from "../components/Menu";
-import Footer from "@/components/Footer";
-
+import React from "react";
 const Container = styled.div`
-  height: 198vh;
-  background-color: #ffffff;
+  background-color: #f1f1f0;
+  display: flex;
+  justify-content: center; // Center children on the x axis
+  align-items: center; // Center children on the y axis
+  height: 100vh;
+  margin: 0;
 `;
-
 const Title = styled.h1`
   margin-bottom: 18px;
   color: gray;
   text-align: center;
-  padding-top: 12rem;
+  padding-top: 7rem;
 `;
 const SubTitle = styled.h1`
   margin-bottom: 8rem;
@@ -22,17 +23,11 @@ const SubTitle = styled.h1`
 
 const Panels = styled.div`
   display: flex;
-  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
   margin-bottom: 4rem;
-`;
-
-const LeftPanel = styled.div`
-  flex: 0.5;
-  background-color: #004d40;
-  height: 60em;
-  position: relative;
+  align-items: center;
+  margin: 0;
 `;
 
 const Image = styled.img`
@@ -50,13 +45,13 @@ const ImageBehind = styled(Image)`
 
 const RightPanel = styled.div`
   flex: 0.5;
-  background-color: #f2ede6;
-  height: 60em;
+  background-color: #e2e2e2;
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 `;
 
 const StoreTitle = styled.h2`
@@ -64,6 +59,7 @@ const StoreTitle = styled.h2`
   align-self: flex-start;
   margin-left: 6rem;
   font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Text shadow for readability
 `;
 
 const ContactInfoContainer = styled.div`
@@ -120,37 +116,24 @@ const Button = styled.button`
     background-color: #777;
   }
 `;
-
-export default function Contact() {
+const Contact = () => {
   return (
     <Container>
-      <Menu />
-      <Title>Contact</Title>
-      <SubTitle>Welcome to our contact page. We are here to help.</SubTitle>
-
-      <Panels>
-        <LeftPanel>
-          <ImageBehind src="/images/bg-leaves.jpg" alt="Image 1" />
-          <Image src="/images/kids4.jpg" alt="Image 2" />
-        </LeftPanel>
-        <RightPanel>
-          <StoreTitle>Visit Our Flagship Store</StoreTitle>
-          <ContactInfoContainer>
-            <Info>500 Terry Francine Street</Info>
-            <Info>San Francisco, CA 94158</Info>
-            <Info>Mail: info@mysite.com</Info>
-            <Info>Tel: 123-456-7890</Info>
-          </ContactInfoContainer>
-          <Form>
-            <Input type="text" placeholder="Name" />
-            <Input type="text" placeholder="Last Name" />
-            <Input type="email" placeholder="Email" />
-            <Textarea rows={4} placeholder="Leave us a message"></Textarea>
-            <Button type="submit">Submit</Button>
-          </Form>
-        </RightPanel>
-      </Panels>
-      <Footer />
+      <RightPanel>
+        <StoreTitle>Контактирај не. ThriftmallMK</StoreTitle>
+        <ContactInfoContainer>
+          <Info>Македонија</Info>
+        </ContactInfoContainer>
+        <Form>
+          <Input type="text" placeholder="Име" />
+          <Input type="text" placeholder="Презиме" />
+          <Input type="email" placeholder="Е-маил" />
+          <Textarea rows={4} placeholder="Остави порака"></Textarea>
+          <Button type="submit">Прати</Button>
+        </Form>
+      </RightPanel>
     </Container>
   );
-}
+};
+
+export default Contact;

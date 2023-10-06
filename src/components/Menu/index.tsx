@@ -17,13 +17,13 @@ const Menu = () => {
           <MenuItem>Моја продавница</MenuItem>
         </Link>
         <Link href="/contact">
-          <MenuItem>За нас</MenuItem>
+          <MenuItem>Продавници</MenuItem>
         </Link>
         <Link href="/contact">
-          <MenuItem>Контакт</MenuItem>
+          <MenuItem>За нас</MenuItem>
         </Link>
       </MenuGroup>
-      <Logo>ThriftMallMK</Logo>
+      <Logo>ПРОДАВНИЦАМК</Logo>
       <MenuGroup>
         <Link href="/favorites">
           <MenuItem>
