@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
+import Link from "next/link"; // Import the Link component from next/link
+
 import {
   FaHeart,
   FaShoppingCart,
@@ -377,7 +379,9 @@ export default function Shop() {
               <JoinedDate>Joined: January 2021</JoinedDate>
             </div>
           </DetailsInfo>
-          <NewProductButton>Додај нов продукт</NewProductButton>{" "}
+          <Link href="/product">
+            <NewProductButton>Додај нов продукт</NewProductButton>{" "}
+          </Link>
           <AdditionalInfo>
             <InfoItem>
               <IconContainer>
