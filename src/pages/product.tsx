@@ -48,26 +48,6 @@ const StyledTextarea = styled.textarea`
   font-size: 1rem;
 `;
 
-const StyledTextarea = styled.textarea`
-  width: 100%;
-  padding: 10px 15px;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  background-color: white;
-  border-radius: 5px;
-  font-size: 1rem;
-`;
-
-const StyledTextarea = styled.textarea`
-  width: 100%;
-  padding: 10px 15px;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  background-color: white;
-  border-radius: 5px;
-  font-size: 1rem;
-`;
-
 const StyledSelect = styled.select`
   width: 100%;
   padding: 10px 15px;
