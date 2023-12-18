@@ -1,125 +1,106 @@
-import Footer from "@/components/Footer";
-import Menu from "@/components/Menu";
-import React from "react";
 import styled from "styled-components";
+import Menu from "../components/Menu";
+import Footer from "@/components/Footer";
 
 const Container = styled.div`
+  height: 170vh;
+  background-color: #ffffff;
+`;
+
+const Title = styled.h1`
+  margin-bottom: 18px;
+  color: gray;
+  text-align: center;
+  padding-top: 12rem;
+`;
+
+const SubTitle = styled.h1`
+  margin-bottom: 8rem;
+  color: gray;
+  text-align: center;
+  font-size: 1.3rem;
+`;
+
+const Panels = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 7rem;
+  padding-bottom: 1rem;
 `;
 
-const TopBanner = styled.div`
-  flex: 2;
-  background-color: #f79791;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
-const WelcomeText = styled.h1`
-  color: #d83967;
-  margin-bottom: 20px;
-`;
-
-const WelcomeSubText = styled.p`
-  font-size: 24px;
-  color: #643a45;
-`;
-
-const MidSection = styled.div`
-  flex: 3;
-  display: flex;
-  background-color: #87d6ec;
-`;
-
-const LeftImageContainer = styled.div`
-  flex: 1;
-  background-color: #f89fa1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const LeftPanel = styled.div`
+  flex: 0.5;
+  background-color: #004d40;
+  height: 60em;
+  position: relative;
 `;
 
 const Image = styled.img`
-  width: 80%;
+  height: 70%;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
-const TextContainer = styled.div`
-  flex: 1;
-  padding: 40px;
+const ImageBehind = styled(Image)`
+  transform: translate(-40%, -40%);
+`;
+
+const RightPanel = styled.div`
+  flex: 0.5;
+  background-color: #f2ede6;
+  height: 70em;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 `;
 
-const Title = styled.h2`
-  margin-bottom: 20px;
-  color: white;
+const StoreTitle = styled.h2`
+  font-size: 2.5rem;
+  color: #004d40;
+  margin-bottom: 2rem;
 `;
 
-const Text = styled.p`
-  color: white;
-`;
+const PurposeText = styled.p`
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 
-const BottomSection = styled.div`
-  flex: 2;
-  display: flex;
-  background-color: #c8c5c6;
+  span {
+    font-weight: bold;
+    color: #004d40;
+  }
 `;
-
-const RightImageContainer = styled(LeftImageContainer)`
-  background-color: #eae0e2;
-`;
-
-const Content = styled.div`
-  background-color: white;
-  margin-top: 100px;
-`;
-
-const AboutUs = () => {
+export default function AboutUs() {
   return (
     <Container>
       <Menu />
-      <Content>
-        <TopBanner>
-          <WelcomeText>Welcome to ThriftmallMK</WelcomeText>
-          <WelcomeSubText>
-            A leading platform in Macedonia for thrift shopping.
-          </WelcomeSubText>
-        </TopBanner>
-        <MidSection>
-          <LeftImageContainer>
-            <Image src="path-to-your-left-image.jpg" alt="Image Description" />
-          </LeftImageContainer>
-          <TextContainer>
-            <Title>About Us</Title>
-            <Text>
-              ThriftmallMK stands as Macedonia's premier thrift shopping
-              platform. We're here to provide unparalleled experiences to our
-              community.
-            </Text>
-          </TextContainer>
-        </MidSection>
-        <BottomSection>
-          <TextContainer>
-            <Text>
-              We're committed to ensuring quality and trust in every
-              transaction, fostering a space of sustainable and cherished thrift
-              shopping.
-            </Text>
-          </TextContainer>
-          <RightImageContainer>
-            <Image src="/images/kids1.jpg" alt="Image Description" />
-          </RightImageContainer>
-        </BottomSection>
-      </Content>
+
+      <Panels>
+        <LeftPanel>
+          <Image src="/images/aboutus.jpg" alt="Image 2" />
+        </LeftPanel>
+        <RightPanel>
+          <StoreTitle>Welcome to ThriftmallMK</StoreTitle>
+          <PurposeText>
+            Discover a universe of stores right at your fingertips. At
+            ThriftmallMK, our vision is simple: <span>Empower creativity</span>.
+            Whether you're into books, fashion, or exploring the unique charm of
+            handmade crafts, this is your haven. Dive into a world where local
+            brands shine and every store tells its own story. Join us in
+            reshaping the way we shop. Welcome to the future of e-commerce.
+          </PurposeText>
+        </RightPanel>
+      </Panels>
       <Footer />
     </Container>
   );
-};
-
-export default AboutUs;
+}
