@@ -14,6 +14,23 @@ const FormTitle = styled.h2`
   color: #333;
   margin-bottom: 2rem;
 `;
+const FormTitle2 = styled.h2`
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+`;
+
+const FormTitle3 = styled.h2`
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+`;
+
+const FormTitle4 = styled.h2`
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+`;
 
 const StyledForm = styled.form`
   width: 70%;
