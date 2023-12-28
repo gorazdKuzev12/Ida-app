@@ -90,6 +90,12 @@ const ProductForm = () => {
           <option value="arts">Уметност и рачна работа</option>
           <option value="brands">Локални брендови</option>
         </StyledSelect>
+        <StyledSelect>
+          <option value="books">Книги</option>
+          <option value="clothes">Облека</option>
+          <option value="arts">Уметност и рачна работа</option>
+          <option value="brands">Локални брендови</option>
+        </StyledSelect>
 
         <InputLabel>Upload Product Image:</InputLabel>
         <StyledInput type="file" />
